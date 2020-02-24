@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>selectors in jquery</title>
+		<style>
+			#div1{
+				height:100px;
+				width:100px;
+				border:12px solid blue;
+				background-image:url(w.jpg);
+				background-size:cover;
+				position:relative;
+				
+			}	
+			#div2{
+				height:100px;
+				width:100px;
+				position:absolute;
+			
+				
+			}
+				.addcolor{
+					background-color:yellow;
+				}
+		</style>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+			  //---------------------//
+					$("#btn1").click(function(){
+						$("#btn1").before("<input type='text'>");
+					})
+					$("#btn2").click(function(){
+						$("#btn1").after("<input type='text'>");
+					})
+					$("#btn3").click(function(){
+						$("#list1").prepend("<li>prepend item peer</li>");
+					})
+					$("#btn4").click(function(){
+						$("#list1").append("<li>append item sapota</li>");
+					})
+					$("#div2").mouseenter(function(){
+						$("#div2").addClass('addcolor');
+						$("#div2").html("<h4>don't copy image</h4>");
+					})
+					$("#div2").mouseleave(function(){
+						$("#div2").removeClass('addcolor');
+						$("#div2").html("");
+					})
+			  //---------------------//
+			
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" id="btn1">before</button>
+		<button type="button" id="btn2">After</button>
+		
+		<h3>prepend append</h3>
+		
+		<ul id="list1">
+			<li>mango</li>
+			<li>banana</li>
+			<li>apple</li>
+			<li>cherry</li>
+		</ul>	
+			<button type="button" id="btn3">Prepend</button>
+		    <button type="button" id="btn4">Append</button>
+		<hr>
+		<h3>add class remove classs</h3>
+				
+			<div id="div1">
+				
+				<div id="div2">
+				
+				</div>
+			
+			</div>
+	</body>
+</html>

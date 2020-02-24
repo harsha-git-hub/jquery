@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>selectors in jquery</title>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+			  //-------------------//
+			    $("p.p1").css("background-color","yellow");
+				
+				$("button[type='button']").css({"height":"50px","width":"250px","background-color":"red","color":"white","font-weight":"bold","font-size":"20px","border":"2px solid transparent","border-radius":"5px"});
+				
+				$("button[type='reset']").css({"height":"50px","width":"250px","background-color":"green","color":"white","font-weight":"bold","font-size":"20px","border":"2px solid transparent","border-radius":"5px"});
+					
+				$("button[type='button']").click(function(){
+					
+					$("p:first").hide();
+				
+				})
+				
+				$("button[type='reset']").click(function(){
+					
+					$("p:first").show();
+				
+				})
+					$("tr:odd").hover(function(){
+						$(this).css({"background-color":"blue","color":"white"});
+					
+					})
+					
+					$("tr:even").hover(function(){
+						$(this).css({"background-color":"green","color":"white"});
+					
+					})
+			  //---------------------//
+			});
+		</script>
+	</head>
+	<body>
+		<p class="p1"> this is a para</p>
+		<p class="p2"> this is a para</p>
+		<p class="p3"> this is a para</p>
+		<button type="button">Hide the 1st para</button>
+		<button type="reset">show the 1st para</button>
+		<br><hr>
+		<table align="center" bgcolor="yellow" border="1" cellspacing="5px">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Moblie</th>
+				<th>City</th>
+			</tr>
+				<tr>
+					<td>abc</td>
+					<td>abc@gmail.com</td>
+					<td>3543154</td>
+					<td>bangalore</td>
+				</tr>
+				
+				<tr>
+					<td>abc</td>
+					<td>abc@gmail.com</td>
+					<td>3543154</td>
+					<td>bangalore</td>
+				</tr>
+				<tr>
+					<td>abc</td>
+					<td>abc@gmail.com</td>
+					<td>3543154</td>
+					<td>bangalore</td>
+				</tr>
+				
+				<tr>
+					<td>abc</td>
+					<td>abc@gmail.com</td>
+					<td>3543154</td>
+					<td>bangalore</td>
+				</tr>
+				<tr>
+					<td>abc</td>
+					<td>abc@gmail.com</td>
+					<td>3543154</td>
+					<td>bangalore</td>
+				</tr>
+		</table>
+	</body>
+</html>

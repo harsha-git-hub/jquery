@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Slideup Slidedown Slidetoggle</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+
+		<script>
+			$(function(){
+			//=============================================//
+				$("#div4").hide();
+
+				$("#div1").click(function(){
+					$("#div2").slideUp(3000);
+				});
+
+				$("#div3").click(function(){
+					$("#div4").slideDown(3000);
+				});
+
+				$("#div5").click(function(){
+					$("#div2,#div4").toggle(3000);
+				});
+			//=============================================//
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1" class="alert alert-primary">click me to see the slide up effect!!</div>
+		<div id="div2" class="alert alert-success">I am sliding!!</div>
+		<div id="div3" class="alert alert-info">click me to see the slide up effect!!</div>
+		<div id="div4" class="alert alert-warning">I am sliding!!</div>
+		<div id="div5" class="alert alert-danger">I am sliding!!</div>
+	</body>
+</html>

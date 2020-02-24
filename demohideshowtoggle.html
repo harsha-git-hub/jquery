@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Hide() show() toggle() demo</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+		<script src="dist/js/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+   			//======================================//
+				$(".btn-primary").click(function(){
+					$("#men").show(2000);
+					$("#women,#kids").hide(2000);
+				});
+
+				$(".btn-success").click(function(){
+					$("#women").show(2000);
+					$("#men,#kids").hide(2000);
+				});
+
+				$(".btn-info").click(function(){
+					$("#kids").show(2000);
+					$("#women,#men").hide(2000);
+				});
+			//======================================//
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					
+				</div>
+
+
+				<div class="col-sm-6">
+					<button type="button" class="btn btn-primary">Men</button>
+					<button type="button" class="btn btn-success">Women</button>
+					<button type="button" class="btn btn-info">Kids</button>
+				</div>
+
+
+				<div class="col-sm-3">
+					
+				</div>
+			</div>
+
+
+			<div class="row" id="men">
+				<div class="col-sm-12 jumbotron">
+					<h3 class="text-center">Men clothing</h3>
+				</div>
+			</div>
+
+			<div class="row" id="women">
+				<div class="col-sm-12 jumbotron">
+					<h3 class="text-center">Women clothing</h3>
+				</div>
+			</div>
+
+			<div class="row" id="kids">
+				<div class="col-sm-12 jumbotron">
+					<h3 class="text-center">Kids clothing</h3>
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+</html>

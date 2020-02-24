@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>button color change </title>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+			  //---------------------//
+				$("button[type='button']").css({"height":"50px","width":"250px","background-color":"red","color":"white","font-weight":"bold","font-size":"20px","border":"2px solid transparent","border-radius":"5px"})
+			  
+			  $("button[type='button']").hover(function(){
+			  
+						$(this).css({"background-color":"blue","color":"white"});
+					
+						$(this).css({"background-color":"green","color":"white"});
+					
+					})
+
+              //--------------------//
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<button type="button">change color</button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<title> signup validation</title>
+		<script src="dist/js/jquery.min.js"></script>
+		<style>
+			span{
+			color:red;
+			}
+		</style>
+		<script>
+			$(function(){
+				//-------------------------//
+						$("#btn1").click(function(){
+							var name=$("#t1").val();
+							var email=$("#t2").val();
+							var moblie=$("#t3").val();
+							var pass=$("#t4").val();
+							var city=$("#city").val();
+							var address=$("#t5").val();
+							var status=true;
+							
+							if(name=="")
+							{
+								$("#t1").css("border","2px solid red");
+								$("#t1").after("<span>Invalid name</span>");
+								status=false;
+							}
+							else{
+								$("#t1").css("border","");
+								$("#t1").after("");
+							}
+							//for email
+							
+							if(email=="")
+							{
+								$("#t2").css("border","2px solid red");
+								$("#t2").after("<span>Invalid email</span>");
+								status=false;
+							}
+							else{
+								$("#t2").css("border","");
+								$("#t2").after("");
+							}	
+							
+							//for phonenumber
+							
+							if(moblie=="")
+							if (moblie=="" || moblie.length<10 || moblie.length>10||isNaN(moblie)) {
+								  $("#t3").css("border", "2px solid red");
+								  $("#t3").after("<span> Invalid moblie</span>");
+								  status=false;
+								  }
+								  else{
+								  $("#t3").css("border", "");
+								  $("#t3").after();
+								  }
+							//for password
+							
+							if(pass=="")
+							
+							{
+								$("#t4").css("border","2px solid red");
+								$("#t4").after("<span>Invalid email</span>");
+								status=false;
+							}
+							else{
+								$("#t4").css("border","");
+								$("#t4").after("");
+							}	
+							//for city
+							
+							if(city=="")
+							
+							{
+								$("#city").css("border","2px solid red");
+								$("#city").after("<span>Invalid email</span>");
+								status=false;
+							}
+							else{
+								$("#city").css("border","");
+								$("#city").after("");
+							}	
+						
+								//for address
+					     	 if (address=="") {
+									   $("#t5").css("border", "2px solid red");
+									   $("#t5").after("<span> Invalid Address</span>");
+									   status=false;
+									   }
+									   else{
+									   $("#t5").css("border", "");
+									   $("#t5").after();
+									   }
+
+           
+
+
+									//    for gender
+
+									if($("#m").is(":checked")||$("#f").is(":checked"))
+									{
+										$("#generr").html("");
+									}
+									else{
+										$("#generr").html("<span>Invalid Gender</span>");
+										status=false;
+									}
+
+
+									if($("#agree").is(":checked"))
+									{
+									$("#chkerr").html("");
+									}
+									else{
+									$("#chkerr").html("<span>Please Select Terms and Conditions</span>");
+									status=false;
+									}
+
+									if(status==true)
+									{
+										alert("Data saved successfully");
+										$("f1").submit();
+									}
+									
+								});
+									
+				//-------------------------//
+			
+			})
+		</script>
+	</head>
+	<body>
+	<form action="#" method="POST" id="f1">
+		<table bgcolor="skyblue" align="center">
+			<tr>
+				<th>name</th>
+				<td><input type="text" id="t1"></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><input type="text" id="t2"></td>
+			</tr>
+			<tr>
+				<th>moblie</th>
+				<td><input type="text" id="t3"></td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td><input type="password" id="t4"></td>
+			</tr>
+			<tr>
+				<th>city</th>
+				<td>
+					<select id="city">
+					<option value="">choose city</option>
+					<option value="bangalore">bangalore</option>
+					<option value="pune">pune</option>
+					<option value="mubai">mubai</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>address</th>
+				<td><textarea id="t5"></textarea></td>
+			</tr>
+			
+			<tr>
+				<th>gender</th>
+				<td>
+				<input type="radio" id="m" value="male" name="gender">Male
+				<input type="radio" id="f" value="female" name="gender">FeMale
+				<span id="generr"=></span>
+				
+				</td>
+			</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="checkbox" id="agree" value="agreed" name="chkbox">I agree terms and conditions
+						<span id="chkerr"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="button" id="btn1">register</button>
+					</td>
+				</tr>
+		</table>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

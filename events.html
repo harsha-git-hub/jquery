@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>selectors in jquery</title>
+		<script src="dist/js/jquery.min.js"></script>
+		<script>
+			$(function(){
+			  //---------------------//
+					$("#div1").css({"height":"200px","width":"200px","background-color":"yellow","color":"blue","border":"5px solid blue","border-radius":"10px","position":"relative"});			  
+				
+					$("#div1").on({
+						mouseenter:function(){
+								$("#div1").text("you entered me");
+								},
+					 mouseleave:function(){
+								$("#div1").html("<b>you left me</b>");
+								}
+								
+								});
+							$("input").on({
+								focus:function(){
+								$(this).css("border","2px solid green");
+								$(this).val("enter your data");
+								},
+								blur:function(){
+								$(this).css("border","2px solid red");
+								$(this).val("");
+								}
+							});
+							$("button").click(function(){
+								$("#div1").animate({"height":"300px","width":"300px","background-color":"yellow","color":"blue","border":"5px solid blue","border-radius":"10px","left":"300px","top":"300px"});			  
+
+							})
+			  //---------------------//
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<button> start animate</button>
+		<hr><br>
+		<table align="center" bgcolor="yellow">
+			<tr>
+				<th>Name</th>
+				<td>
+				
+				<input type="text">
+				<span id="msg1"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<th>Email</th>
+				<td><input type="email"></td>
+			</tr>
+		</table>
+	</body>
+</html>
